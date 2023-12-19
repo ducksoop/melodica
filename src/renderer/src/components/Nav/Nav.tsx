@@ -4,11 +4,12 @@ import NavButton from './NavButton/NavButton'
 const Nav = (): JSX.Element => {
   return (
     <StyledNav>
-      <NavButton hex="&#xE1D3;" label="Library" />
-      <NavButton hex="&#xE721;" label="Search" />
-      <NavButton hex="&#xE006;" label="Favorites" />
+      <NavButton hex="&#xE1D3;" label="Library" to="library" />
+      <NavButton hex="&#xE721;" label="Search" to="search" />
+      <NavButton hex="&#xE006;" label="Favorites" to="favorites" />
       <div className="nav-spacer" />
-      <NavButton hex="&#xE713;" label="Settings" />
+      <NavButton hex="&#xF133;" label="Updates" to="updates" />
+      <NavButton hex="&#xE713;" label="Settings" to="settings" />
     </StyledNav>
   )
 }
