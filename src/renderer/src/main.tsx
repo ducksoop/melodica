@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
+import App from './components/App/App'
+
 import './assets/index.css'
-import AppProvider from './components/AppProvider/AppProvider'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <AppProvider />
+    <App />
   </React.StrictMode>
 )

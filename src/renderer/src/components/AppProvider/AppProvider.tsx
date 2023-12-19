@@ -3,15 +3,14 @@ import { ThemeProvider } from '@emotion/react'
 import useTheme from '../../hooks/useTheme'
 
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
-import { RouterProvider } from 'react-router-dom'
-import { router } from '../../routes/routes'
+import { PropsWithChildren } from 'react'
 
-const AppProvider = (): JSX.Element => {
+const AppProvider = ({ children }: PropsWithChildren): JSX.Element => {
   const theme = useTheme()
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <RouterProvider router={router} />
+      {children}
     </ThemeProvider>
   )
 }

@@ -1,16 +1,11 @@
-import { Suspense } from 'react'
-import { Outlet } from 'react-router-dom'
-
-import Nav from '../Nav/Nav'
+import AppProvider from '../AppProvider/AppProvider'
+import AppContent from '../AppContent/AppContent'
 
 const App = (): JSX.Element => {
   return (
-    <>
-      <Nav />
-      <Suspense fallback={<></>}>
-        <Outlet />
-      </Suspense>
-    </>
+    <AppProvider>
+      <AppContent />
+    </AppProvider>
   )
 }
 
