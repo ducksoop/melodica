@@ -3,7 +3,7 @@ import { ThemeProvider } from '@emotion/react'
 import useTheme from '../../hooks/useTheme/useTheme'
 
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
-import { PropsWithChildren } from 'react'
+import { type PropsWithChildren } from 'react'
 
 const AppProvider = ({ children }: PropsWithChildren): JSX.Element => {
   const theme = useTheme()

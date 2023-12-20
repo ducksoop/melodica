@@ -1,16 +1,21 @@
+import { AnimatePresence } from 'framer-motion'
+
 import { useNavigation } from '../../hooks'
-import { navItems } from '../../hooks/useNavigation/useNavigation'
+import { navigationTemplate } from '../../pages/Pages'
+
 import Nav from '../Nav/Nav'
 
 const AppContent = (): JSX.Element => {
-  const { content: Content, menu } = useNavigation(navItems)
+  const {
+    components: { content, menu },
+    navigateTo
+  } = useNavigation(navigationTemplate)
 
   return (
     <>
-      <Nav />
-      <Content />
+      <Nav navigateTo={navigateTo} />
+      <AnimatePresence mode="wait">{content}</AnimatePresence>
     </>
   )
 }
-
 export default AppContent
