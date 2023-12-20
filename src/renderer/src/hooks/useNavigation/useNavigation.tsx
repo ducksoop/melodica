@@ -1,16 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-import type {
-  NavigateTo,
-  NavigationComponents,
-  NavigationPageId,
-  NavigationTemplate,
-  UseNavigation
+import {
+  type NavigateTo,
+  type NavigationComponents,
+  type NavigationPageId,
+  type NavigationTemplate,
+  type UseNavigation
 } from './useNavigation.types'
 
 const useNavigation: UseNavigation = (navigationTemplate: NavigationTemplate) => {
-  const [currentPageId, setCurrentPageId] = useState<NavigationPageId>()
-
+  const [currentPageId, setCurrentPageId] = useState<NavigationPageId>('')
   const [components, setComponents] = useState<NavigationComponents>({
     menu: <></>,
     content: <></>
@@ -27,9 +26,20 @@ const useNavigation: UseNavigation = (navigationTemplate: NavigationTemplate) =>
     })
   }
 
+  useEffect(() => {
+    navigateTo(
+      Object.keys(navigationTemplate)
+        .filter(
+          (navigationPageId: NavigationPageId) => navigationTemplate[navigationPageId]['default']
+        )
+        .at(0) ?? ''
+    )
+  }, [])
+
   return {
     components,
-    navigateTo
+    navigateTo,
+    currentPageId
   }
 }
 
