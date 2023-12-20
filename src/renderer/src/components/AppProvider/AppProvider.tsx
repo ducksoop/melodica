@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 
-import useTheme from '../../hooks/useTheme'
+import useTheme from '../../hooks/useTheme/useTheme'
 
 import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import { PropsWithChildren } from 'react'
