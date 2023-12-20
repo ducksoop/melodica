@@ -6,17 +6,14 @@ import { navigationTemplate } from '../../pages/Pages'
 import Nav from '../Nav/Nav'
 
 const AppContent = (): JSX.Element => {
-  const {
-    components: { content },
-    navigateTo,
-    currentPageId
-  } = useNavigation(navigationTemplate)
+  useNavigation(navigationTemplate)
 
   return (
     <>
-      <Nav navigateTo={navigateTo} currentPageId={currentPageId} />
-      <AnimatePresence mode="wait">{content}</AnimatePresence>
+      <Nav />
+      <AnimatePresence mode="wait"></AnimatePresence>
     </>
   )
 }
+
 export default AppContent

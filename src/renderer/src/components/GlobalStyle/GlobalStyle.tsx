@@ -27,8 +27,7 @@ const GlobalStyle = (): JSX.Element => {
           /* font-family: 'Outfit'; */
           background: ${background};
           color: ${color};
-          overflow-y: scroll;
-          overflow-x: hidden;
+          overflow: hidden;
           user-select: none;
         }
         #root {
