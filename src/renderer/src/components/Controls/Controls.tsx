@@ -1,9 +1,9 @@
-import Icon from '../Icon/Icon'
+import StyledControls from './Controls.styles'
 
 const Controls = (): JSX.Element => {
   return (
-    <div>
-      <Icon hex="&#xE102;" />
+    <StyledControls>
+      {/* <Icon hex="&#xE102;" />
       <Icon hex="&#xE103;" />
       <Icon hex="&#xE892;" />
       <Icon hex="&#xE893;" />
@@ -18,8 +18,8 @@ const Controls = (): JSX.Element => {
       <Icon hex="&#xE994;" />
       <Icon hex="&#xE995;" />
       <Icon hex="&#xEB51;" />
-      <Icon hex="&#xEB52;" />
-    </div>
+      <Icon hex="&#xEB52;" /> */}
+    </StyledControls>
   )
 }
 
