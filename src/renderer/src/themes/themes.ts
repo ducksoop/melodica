@@ -15,7 +15,11 @@ const themes: Themes = {
     scrollbarThumbHover: '#f5f5f5',
     nav: '#fff',
     navBorder: '#bdbdbd',
-    navButtonSelected: '#f5f5f5'
+    navButton: '#fff',
+    navButtonSelected: '#f5f5f5',
+    navSearch: '#fff',
+    navSearchSelected: '#f5f5f5',
+    navSearchSelection: '#bdbdbd'
   },
   dark: {
     background: '#212121',
@@ -24,7 +28,11 @@ const themes: Themes = {
     scrollbarThumbHover: '#424242',
     nav: '#212121',
     navBorder: '#3b3b3b',
-    navButtonSelected: '#323232'
+    navButton: '#212121',
+    navButtonSelected: '#323232',
+    navSearch: '#212121',
+    navSearchSelected: '#3b3b3b',
+    navSearchSelection: '#000'
   }
 }
 
