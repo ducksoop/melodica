@@ -32,6 +32,7 @@ const GlobalStyle = (): JSX.Element => {
         }
         #root {
           display: flex;
+          flex-direction: column;
           flex: 1;
         }
         ::-webkit-scrollbar {
